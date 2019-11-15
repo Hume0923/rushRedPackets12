@@ -84,7 +84,7 @@ public class RushRedPacketsController {
         idSet.add(id);
 
         if(redPacketList.isEmpty()){
-            logger.info("沒取得紅包 :{}, id :{}", now, id);
+//            logger.info("沒取得紅包 :{}, id :{}", now, id);
             return new ServerResponseModel("紅包搶完了");
         }else if(0 == redPacketList.size() && null != userSessionIds.putIfAbsent(now, idSet)){
             Set<String> value = userSessionIds.putIfAbsent(now, idSet);
